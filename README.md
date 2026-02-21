@@ -1,41 +1,27 @@
-# Website
+# Deblx Documentation
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Official documentation for Deblx Unreal Engine plugins.
 
-## Installation
+## 📦 Our Plugins
 
-```bash
-yarn
-```
+All plugins are available on [Fab](https://www.fab.com/de/sellers/Deblx):
 
-## Local Development
+| Plugin | Fab |
+|--------|-----|
+| Asset Size Analyzer | [View on Fab](https://www.fab.com/listings/...) |
+| Duplicate Asset Detector | [View on Fab](https://www.fab.com/listings/...) |
 
-```bash
-yarn start
-```
+## 💬 Support & Community
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+**Questions? Issues? Ideas?** We provide support via Discord threads:
 
-## Build
+- 🔧 [Deblx Dev Discord](https://discord.gg/UJCnVjwTTt) (for Fab users)
+- 🟣 [Deblx Discord](https://discord.gg/xXVZjWFeKq)
 
-```bash
-yarn build
-```
+Ask questions in threads and get help from the community and our team!
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+---
 
-## Deployment
+**[deblx.com](https://deblx.com)** · Made by devs, for devs
 
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+This documentation is built with [Docusaurus](https://docusaurus.io/).
