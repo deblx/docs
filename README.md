@@ -1,27 +1,44 @@
-# Deblx Documentation
+# Deblx
 
-Official documentation for Deblx Unreal Engine plugins.
-
-## 📦 Our Plugins
-
-All plugins are available on [Fab](https://www.fab.com/de/sellers/Deblx):
-
-| Plugin | Fab |
-|--------|-----|
-| Asset Size Analyzer | [View on Fab](https://www.fab.com/listings/...) |
-| Duplicate Asset Detector | [View on Fab](https://www.fab.com/listings/...) |
-
-## 💬 Support & Community
-
-**Questions? Issues? Ideas?** We provide support via Discord threads:
-
-- 🔧 [Deblx Dev Discord](https://discord.gg/UJCnVjwTTt) (for Fab users)
-- 🟣 [Deblx Discord](https://discord.gg/xXVZjWFeKq)
-
-Ask questions in threads and get help from the community and our team!
+> Plugins by Deblx, for devs. Built with Unreal Engine — available on Fab.
 
 ---
 
-**[deblx.com](https://deblx.com)** · Made by devs, for devs
+## 📦 Our Plugins
 
-This documentation is built with [Docusaurus](https://docusaurus.io/).
+All plugins are available on Fab:
+
+| Plugin | Fab |
+|--------|-----|
+| Asset Size Analyzer | [View on Fab](https://fab.com/listings/0442fae4-fd97-4444-9eac-f9e4decdcad2) |
+| Duplicate Asset Detector | [View on Fab](https://fab.com/listings/dd014910-235d-48d1-8e35-b6e903d5a051) |
+
+---
+
+## 📖 Docs
+
+Documentation for each plugin lives right here   — setup, changelog, all of it.
+
+---
+
+## 💬 Discord
+
+Questions? Issues? Ideas? Come hang:
+
+- 🔧 **Deblx Dev Discord** *(for Fab users)* — [discord.gg/UJCnVjwTTt](https://discord.com/invite/UJCnVjwTTt)
+- 🟣 **Deblx Discord** — [discord.gg/xXVZjWFeKq](https://discord.com/invite/xXVZjWFeKq)
+
+---
+
+## 📣 Stay in the Loop
+
+New plugins, updates, behind-the-scenes — follow Deblx:
+
+- 🐦 **X** — [@deblxofficial](https://x.com/deblxofficial)
+- 🛒 **Fab** — [All plugins in one place](https://fab.com/sellers/deblx)
+
+---
+
+<p align="center">
+  <a href="https://deblx.com">deblx.com</a> · Made by devs, for devs
+</p>
