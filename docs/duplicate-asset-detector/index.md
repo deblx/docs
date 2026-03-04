@@ -36,7 +36,7 @@ Over time, Unreal projects accumulate duplicate assets - copied textures, materi
 
 ## Technical Details
 
-- **Supported Engine Versions:** 5.5, 5.6, 5.7
+- **Supported Engine Versions:** 5.4, 5.5, 5.6, 5.7
 - **Platforms:** Windows, Mac
 - **Module Type:** Editor Plugin
 - **Network Replicated:** No
