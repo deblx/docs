@@ -108,28 +108,40 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Community',
             items: [
               {
-                label: 'Tutorial',
-                to: '/intro',
+                label: 'Deblx Dev Discord',
+                href: 'https://discord.gg/UJCnVjwTTt',
+              },
+              {
+                label: 'Deblx Discord',
+                href: 'https://discord.gg/xXVZjWFeKq',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Social',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'X / Twitter',
+                href: 'https://x.com/deblxofficial',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Twitch',
+                href: 'https://www.twitch.tv/deblx',
               },
               {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
+                label: 'Facebook',
+                href: 'https://www.facebook.com/deblxofficial',
+              },
+              {
+                label: 'YouTube',
+                href: 'https://www.youtube.com/deblx',
+              },
+              {
+                label: 'GitHub',
+                href: 'https://github.com/deblx',
               },
             ],
           },
@@ -137,17 +149,21 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'Fab Marketplace',
+                href: 'https://www.fab.com/de/sellers/Deblx',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Website',
+                href: 'https://deblx.com',
+              },
+              {
+                label: 'Imprint',
+                href: 'https://deblx.com/imprint',
               },
             ],
           },
         ],
-        copyright: `Copyright © 2026 Deblx. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Deblx. Hosted by GitHub Pages.`,
       },
       prism: {
         theme: prismThemes.github,
