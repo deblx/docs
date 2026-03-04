@@ -1,6 +1,7 @@
 module.exports = {
   docs: [
     'intro',
+    'verification',
     {
       type: 'category',
       label: 'Quick Notes',
