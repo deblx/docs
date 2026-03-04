@@ -15,7 +15,7 @@ sidebar_position: 2
 2. Go to your **Fab Library**
 3. Find **Quick Notes**
 4. Click **Install to Engine**
-5. Select your Unreal Engine version (5.0 - 5.7)
+5. Select your Unreal Engine version (5.1 - 5.7)
 6. Click **Install**
 
 ## Enable the Plugin
