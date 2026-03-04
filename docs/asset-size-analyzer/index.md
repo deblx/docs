@@ -56,7 +56,7 @@ Asset Size Analyzer is a **free** editor tool that provides comprehensive insigh
 
 ## Technical Details
 
-- **Supported Engine Versions:** 5.0, 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7
+- **Supported Engine Versions:** 5.4, 5.5, 5.6, 5.7
 - **Platforms:** Windows, Mac
 - **Module Type:** Editor Only (no runtime impact)
 - **Network Replicated:** No
