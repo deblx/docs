@@ -20,7 +20,7 @@ Asset Size Analyzer is **completely FREE**!
 2. Go to your **Fab Library**
 3. Find **Asset Size Analyzer**
 4. Click **Install to Engine**
-5. Select your Unreal Engine version (5.0 - 5.7)
+5. Select your Unreal Engine version (5.4, 5.5, 5.6 or 5.7)
 6. Click **Install**
 
 ## Enable the Plugin
