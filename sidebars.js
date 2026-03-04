@@ -3,6 +3,16 @@ module.exports = {
     'intro',
     {
       type: 'category',
+      label: 'Quick Notes',
+      items: [
+        'quick-notes/index',
+        'quick-notes/installation',
+        'quick-notes/features',
+        'quick-notes/usage',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Duplicate Asset Detector',
       items: [
         'duplicate-asset-detector/index',
