@@ -4,17 +4,6 @@
 
 ---
 
-## 📦 Our Plugins
-
-All plugins are available on Fab:
-
-| Plugin | Fab |
-|--------|-----|
-| Asset Size Analyzer | [View on Fab](https://fab.com/listings/0442fae4-fd97-4444-9eac-f9e4decdcad2) |
-| Duplicate Asset Detector | [View on Fab](https://fab.com/listings/dd014910-235d-48d1-8e35-b6e903d5a051) |
-
----
-
 ## 📖 Docs
 
 Documentation for each plugin lives right here   — setup, changelog, all of it.
