@@ -19,6 +19,11 @@ Find and manage duplicate assets in your UE5 projects with advanced detection al
 
 [Learn more →](/duplicate-asset-detector)
 
+### Loading Screen Pro (PRO)
+Replace the default black screen with a fully animated, cinematic loading experience. Slideshow, music, hints, multiple progress bar and spinner styles — configured entirely through a Data Asset, no C++ required.
+
+[Learn more →](/loading-screen-pro)
+
 ### Asset Size Analyzer (FREE)
 Analyze asset sizes and optimize your project performance. Get detailed insights into which assets are consuming the most space and identify optimization opportunities.
 
