@@ -194,10 +194,3 @@ Quick targeted search:
 
 **Note:**
 Memory sizes are estimates based on asset properties. Actual runtime memory may vary based on compression, streaming, and engine settings.
-
-## Support
-
-Need help? Contact us:
-- [Deblx Dev Discord](https://discord.gg/UJCnVjwTTt) - Fast community support
-- Email: support@deblx.com
-- [Documentation](https://deblx.github.io/docs/)

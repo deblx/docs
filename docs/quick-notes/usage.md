@@ -233,12 +233,3 @@ Create periodic exports:
 ## Keyboard Shortcuts
 
 Currently, Quick Notes uses context menus for creation. Keyboard shortcuts may be added in future updates based on user feedback!
-
-## Support
-
-Need help? Contact us:
-- [Deblx Dev Discord](https://discord.gg/UJCnVjwTTt) - Fast community support
-- Email: support@deblx.com
-- [Documentation](https://deblx.github.io/docs/)
-
-**Feature requests welcome!** We improve Quick Notes based on your feedback.

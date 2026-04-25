@@ -52,8 +52,6 @@ Store account name: YourFabUsername
 Once verified, you will automatically receive:
 
 ✅ **Access to product-specific channels:**
-- Duplicate Asset Detector Pro support
-- Quick Notes Pro support
 - Private discussion channels
 
 ✅ **Role badges:**
