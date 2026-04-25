@@ -4,6 +4,11 @@ module.exports = {
     'verification',
     {
       type: 'category',
+      label: 'Loading Screen Pro',
+      items: ['loading-screen-pro/index','loading-screen-pro/installation','loading-screen-pro/features','loading-screen-pro/usage'],
+    },
+    {
+      type: 'category',
       label: 'Quick Notes',
       items: ['quick-notes/index','quick-notes/installation','quick-notes/features','quick-notes/usage'],
     },
@@ -11,11 +16,6 @@ module.exports = {
       type: 'category',
       label: 'Duplicate Asset Detector',
       items: ['duplicate-asset-detector/index','duplicate-asset-detector/installation','duplicate-asset-detector/features','duplicate-asset-detector/usage'],
-    },
-    {
-      type: 'category',
-      label: 'Loading Screen Pro',
-      items: ['loading-screen-pro/index','loading-screen-pro/installation','loading-screen-pro/features','loading-screen-pro/usage'],
     },
     {
       type: 'category',
