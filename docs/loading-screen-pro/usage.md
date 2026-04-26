@@ -2,58 +2,86 @@
 sidebar_position: 4
 ---
 
-# Usage
+# Usage Guide
 
-## Getting Started
+## Quick Setup (2 minutes)
 
-1. Open **Edit → Project Settings → Plugins → Loading Screen Pro**
-2. Click **✚ Create & Assign Default Loading Screen Asset**
-3. The asset opens automatically — configure images, hints, music, and more
-4. Click **▶ Preview Loading Screen** to see the result live
-5. Press Launch or package your game — the loading screen appears on every level transition
+### Step 1 — Open Plugin Settings
 
-## Configuring the Data Asset
+In Unreal Engine, go to **Edit → Project Settings**, then scroll down on the left side to **Plugins → Loading Screen Pro**.
 
-**General**
-Set `Background Color` as the base color. Optionally assign a `Background Image` for a quick full-screen backdrop without a slideshow.
+### Step 2 — Create the Default Asset
 
-**Media Sequence**
-Add images to the array and set duration and transition per slide. Enable `Ken Burns` for a cinematic zoom effect. Enable `Loop Sequence` so the slideshow cycles if loading takes longer than one full pass.
+Click the **✚ Create & Assign Default Loading Screen Asset** button.
 
-**Progress Bar**
-Choose a `Progress Bar Style` (Bar / Segmented / Stepped). Enable `Gradient Progress Bar` and set start and end colors for a colored fill.
+This automatically creates a `DA_LoadingScreen` Data Asset in your project's `Content/` folder and assigns it as the active loading screen.
 
-**Spinner**
-Choose a `Spinner Style` (Ring / Arc / Bars / Dots). Or assign a `Spinner Texture` to use your own rotating image.
+### Step 3 — The Asset Opens Automatically
 
-**Audio**
-Assign `Background Music` and set volume and fade-in duration. Assign `Transition Sound` for a sound on each slide change.
+The Data Asset opens in the Details panel. Here you configure everything:
 
-**Hints**
-Add entries to the `Hints` array — each can have text and an optional icon. Set `Hint Display Mode` to Random or Sequential.
+- **Slideshow Images** — add your background images (Texture2D)
+- **Background Color** — fallback color if no images are added
+- **Hints** — add loading tips that cycle during loading
+- **Music** — assign a background sound
+- **Progress Bar** — choose style (Bar / Segmented / Stepped)
+- **Spinner** — choose style (Ring / Arc / Bars / Dots)
+
+### Step 4 — Preview the Loading Screen
+
+At the top of the Data Asset, click the **▶ Preview Loading Screen** button.
+
+A **1280×720 preview window** opens immediately — no Play-in-Editor required. You see all animations, transitions, and music playing live. Close the window when done.
+
+### Step 5 — Play the Game
+
+Press **Play** or package the game. The loading screen appears automatically on every level transition — no Blueprint nodes required for basic use.
+
+---
 
 ## Per-Level Loading Screens
 
-1. Create a second Data Asset (e.g. `DA_BossLevel`)
-2. Open **Project Settings → Loading Screen Pro**
-3. Add an entry to **Level Loading Screen Overrides**
-4. Set the key to the short map name (e.g. `BossLevel`) and the value to your asset
+To use a different loading screen on a specific map:
+
+1. Create a new Data Asset: **right-click in Content Browser → Miscellaneous → Data Asset → LSPDataAsset**
+2. Configure it as desired
+3. Go to **Project Settings → Plugins → Loading Screen Pro**
+4. Under **Per-Level Overrides**, click **+** and set:
+   - **Map** → select your level
+   - **Loading Screen Asset** → select the new Data Asset
+
+---
 
 ## Blueprint Integration
 
-**Show a loading screen manually** — use the `Show Loading Screen` node and pass your Data Asset (or leave empty for the default).
+### Show / Hide Loading Screen manually
 
-**Drive progress from Blueprint** — call `Set Loading Progress` every Tick with your current progress value (0.0–1.0). Call `Clear Loading Progress Override` and `Hide Loading Screen` when done.
+Use the **Show Loading Screen** and **Hide Loading Screen** Blueprint nodes to trigger loading screens manually — for example during a cutscene or custom transition.
 
-**React to slide changes** — bind to `On Slide Changed` on the LSP Subsystem.
+### Drive Progress from Blueprint
+
+Use the **Set Loading Progress** node and pass a float value between `0.0` and `1.0` to control the progress bar from code.
+
+### Events
+
+| Event | When it fires |
+|---|---|
+| On Slide Changed | Every time the active slide changes |
+| On Loading Screen Shown | When the loading screen appears |
+| On Loading Screen Hidden | When the loading screen disappears |
+
+---
 
 ## Troubleshooting
 
 **Loading screen does not appear**
-Make sure a Data Asset is assigned in Project Settings. Loading screens do not appear in PIE — use Launch or a packaged build.
+→ Make sure a Data Asset is assigned in Project Settings. Loading screens only appear in **packaged builds** or **Launch** — not in Play-in-Editor (PIE).
 
 **Progress bar stays at 0%**
-Ensure `Minimum Display Time` is greater than 0. If using Blueprint-driven progress, call `Set Loading Progress` every Tick.
+→ Set a **Minimum Display Time** (e.g. 2.0 seconds) in the Data Asset so the bar has time to animate.
 
 **Music does not play**
-Check that `Background Music` is assigned in the Data Asset. Music requires a valid game world — it will not play if no level is loaded yet.
+→ Music plays correctly in packaged builds. In the editor, use the **▶ Preview Loading Screen** button — not PIE.
+
+**Images do not show**
+→ Make sure the textures are set to **Texture2D** and use a compatible format (RGBA8 or DXT5).
