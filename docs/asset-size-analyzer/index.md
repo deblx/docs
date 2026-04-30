@@ -8,7 +8,7 @@ Analyze and visualize asset sizes in your Unreal Engine project. Quickly identif
 
 ## Overview
 
-Asset Size Analyzer is a **free** editor tool that provides comprehensive insights into your project's asset sizes. Whether you're optimizing for memory budgets, preparing for shipping, or conducting asset audits, this plugin gives you the data you need to make informed decisions.
+Asset Size Analyzer is an editor tool that provides comprehensive insights into your project's asset sizes. Whether you're optimizing for memory budgets, preparing for shipping, or conducting asset audits, this plugin gives you the data you need to make informed decisions.
 
 ## Key Features
 
@@ -60,7 +60,6 @@ Asset Size Analyzer is a **free** editor tool that provides comprehensive insigh
 - **Platforms:** Windows, Mac
 - **Module Type:** Editor Only (no runtime impact)
 - **Network Replicated:** No
-- **Price:** FREE
 
 ## Supported Asset Types
 
@@ -75,7 +74,7 @@ Asset Size Analyzer is a **free** editor tool that provides comprehensive insigh
 
 ## Get It Now
 
-Download for **FREE** from [Fab Marketplace](https://www.fab.com/de/sellers/Deblx)
+From [Fab Marketplace](https://www.fab.com/de/sellers/Deblx)
 
 ## Support
 
