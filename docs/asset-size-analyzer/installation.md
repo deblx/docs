@@ -6,12 +6,11 @@ sidebar_position: 2
 
 ## Download from Fab
 
-Asset Size Analyzer is **completely FREE**!
 
 1. Go to the [Fab Marketplace](https://www.fab.com/de/sellers/Deblx)
 2. Find **Asset Size Analyzer**
-3. Click **Add to Cart** (it's free!)
-4. Complete checkout (no payment required)
+3. Click **Add to Cart**
+4. Complete checkout
 5. The plugin will be added to your Fab library
 
 ## Install in Unreal Engine
@@ -20,7 +19,7 @@ Asset Size Analyzer is **completely FREE**!
 2. Go to your **Fab Library**
 3. Find **Asset Size Analyzer**
 4. Click **Install to Engine**
-5. Select your Unreal Engine version (5.4, 5.5, 5.6 or 5.7)
+5. Select your Unreal Engine version (5.1, 5.2, 5.3, 5.4, 5.5, 5.6 or 5.7)
 6. Click **Install**
 
 ## Enable the Plugin
