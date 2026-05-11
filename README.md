@@ -29,5 +29,5 @@ New plugins, updates, behind-the-scenes — follow Deblx:
 ---
 
 <p align="center">
-  <a href="https://deblx.com">deblx.com</a> · Made by devs, for devs
+  <a href="https://deblx.com">deblx.com</a> · Made by Deblx, for You!
 </p>
