@@ -115,7 +115,7 @@ const config = {
               },
               {
                 label: 'Deblx Discord',
-                href: 'https://discord.gg/xXVZjWFeKq',
+                href: 'https://discord.deblx.com',
               },
             ],
           },
