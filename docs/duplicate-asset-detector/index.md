@@ -36,8 +36,8 @@ Over time, Unreal projects accumulate duplicate assets - copied textures, materi
 
 ## Technical Details
 
-- **Supported Engine Versions:** 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7
-- **Platforms:** Windows, Mac
+- **Supported Engine Versions:** 5.1+
+- **Platforms:** Windows, Mac, Linux
 - **Module Type:** Editor Plugin
 - **Network Replicated:** No
 - **Supported Asset Types:** All (Textures, Materials, Static Meshes, Skeletal Meshes, Sounds, Blueprints, Data Tables, and more)
@@ -45,10 +45,3 @@ Over time, Unreal projects accumulate duplicate assets - copied textures, materi
 ## Get It Now
 
 Available on [Fab Marketplace](https://www.fab.com/de/sellers/Deblx)
-
-## Support
-
-Need help? Join our Discord community:
-- [Deblx Dev Discord](https://discord.gg/UJCnVjwTTt)
-- [Documentation](https://deblx.github.io/docs/)
-- Email: support@deblx.com
