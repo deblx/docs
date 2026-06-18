@@ -1,12 +1,12 @@
 # Deblx
 
-> Plugins by Deblx, for devs. Built with Unreal Engine — available on Fab.
+> Plugins by Deblx, for You! Built with Unreal Engine — available on Fab.
 
 ---
 
 ## 📖 Docs
 
-Documentation for each plugin lives right here   — setup, changelog, all of it.
+Documentation for each plugin lives right here   — setup, all of it.
 
 ---
 
@@ -14,8 +14,8 @@ Documentation for each plugin lives right here   — setup, changelog, all of it
 
 Questions? Issues? Ideas? Come hang:
 
-- 🔧 **Deblx Dev Discord** *(for Fab users)* — [discord.gg/UJCnVjwTTt](https://discord.com/invite/UJCnVjwTTt)
-- 🟣 **Deblx Discord** — [discord.gg/xXVZjWFeKq](https://discord.com/invite/xXVZjWFeKq)
+- 🔧 **Deblx Dev Discord** *(for Fab users)* — [Dev Discord](https://discord-dev.deblx.com)
+- 🟣 **Deblx Discord** — [Discord](https://discord.deblx.com)
 
 ---
 
@@ -25,7 +25,6 @@ New plugins, updates, behind-the-scenes — follow Deblx:
 
 - 🐦 **X** — [@deblxofficial](https://x.com/deblxofficial)
 - 🛒 **Fab** — [All plugins in one place](https://fab.com/sellers/deblx)
-
 ---
 
 <p align="center">
