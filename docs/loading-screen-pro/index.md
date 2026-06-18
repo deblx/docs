@@ -23,7 +23,7 @@ Professional loading screen system for Unreal Engine. Replace the default black 
 
 | | |
 |---|---|
-| **Engine Versions** | UE 5.1 – UE 5.7 |
+| **Engine Versions** | UE 5.1+ |
 | **Platforms** | Windows, Mac, Linux |
 | **Module Type** | Runtime + Editor |
 | **Network Replicated** | No |
@@ -32,8 +32,3 @@ Professional loading screen system for Unreal Engine. Replace the default black 
 ## Fab Marketplace
 
 [View on Fab →](https://www.fab.com/de/sellers/Deblx)
-
-## Support
-
-📧 support@deblx.com  
-💬 [Discord](https://discord.gg/UJCnVjwTTt)
