@@ -75,10 +75,3 @@ Asset Size Analyzer is an editor tool that provides comprehensive insights into 
 ## Get It Now
 
 From [Fab Marketplace](https://www.fab.com/de/sellers/Deblx)
-
-## Support
-
-Need help? Join our Discord community:
-- [Deblx Dev Discord](https://discord.gg/UJCnVjwTTt)
-- [Documentation](https://deblx.github.io/docs/)
-- Email: support@deblx.com
