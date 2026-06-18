@@ -52,7 +52,7 @@ Every note includes:
 
 ## Technical Details
 
-- **Supported Engine Versions:** 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7
+- **Supported Engine Versions:** 5.1+
 - **Platforms:** Windows, Mac, Linux
 - **Module Type:** Editor Only (no runtime impact)
 - **Network Replicated:** No
@@ -67,10 +67,3 @@ Every note includes:
 ## Get It Now
 
 Available on [Fab Marketplace](https://www.fab.com/de/sellers/Deblx)
-
-## Support
-
-Need help? Join our Discord community:
-- [Deblx Dev Discord](https://discord.gg/UJCnVjwTTt)
-- [Documentation](https://deblx.github.io/docs/)
-- Email: support@deblx.com
