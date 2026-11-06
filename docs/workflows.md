@@ -66,4 +66,4 @@ A regular maintenance pass can combine all four tools:
 | Track editor TODOs and bug markers | [Quick Notes / ToDo](/quick-notes/usage) |
 | Improve level-loading presentation | [Loading Screen Pro](/loading-screen-pro/usage) |
 
-Need help with a workflow? Use the [Deblx Help Center](https://help.deblx.com).
+Need help with a workflow? Use the [Deblx Help Center](https://deblx.com/help).

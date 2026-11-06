@@ -26,7 +26,7 @@ Please include:
 
 ## Contact & Community
 
-**[Open the Deblx Help Center](https://help.deblx.com)** to submit a support request or report an issue through the support portal.
+**[Open the Deblx Help Center](https://deblx.com/help)** to submit a support request or report an issue through the support portal.
 
 
 - [Deblx Developer Discord](https://discord-dev.deblx.com) — developer discussions.

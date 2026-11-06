@@ -74,7 +74,7 @@ export default defineConfig({
       },
       { text: 'Website', link: 'https://deblx.com' },
       { text: 'Changelog', link: changelog },
-      { text: 'Help Center ↗', link: 'https://help.deblx.com' }
+      { text: 'Support', link: 'https://deblx.com/help' }
     ],
     sidebar: [
       {
@@ -100,7 +100,7 @@ export default defineConfig({
         items: [
           { text: 'Glossary', link: '/glossary' },
           { text: 'Discord Verification', link: '/verification' },
-          { text: 'Help Center', link: 'https://help.deblx.com' },
+          { text: 'Support Portal', link: 'https://deblx.com/help' },
           { text: 'Support & Feedback', link: '/support' },
           { text: 'Privacy', link: '/privacy' },
           { text: 'Contributing', link: '/contributing' },

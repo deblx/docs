@@ -7,7 +7,7 @@ import { withBase } from 'vitepress'
     <div class="deblx-doc-footer__links">
       <a href="https://deblx.com" target="_blank" rel="noopener noreferrer">Deblx</a>
       <a href="https://changelog.deblx.com" target="_blank" rel="noopener noreferrer">Changelog</a>
-      <a href="https://help.deblx.com" target="_blank" rel="noopener noreferrer">Help Center</a>
+      <a href="https://deblx.com/help" target="_blank" rel="noopener noreferrer">Support</a>
       <a :href="withBase('/privacy')">Privacy</a>
       <a href="https://github.com/deblx/docs" target="_blank" rel="noopener noreferrer">GitHub</a>
     </div>

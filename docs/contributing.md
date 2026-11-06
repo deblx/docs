@@ -15,7 +15,7 @@ The documentation is maintained in the public [deblx/docs](https://github.com/de
 4. Propose the changes through a pull request.
 5. Explain what changed and which Unreal Engine or plugin version the correction applies to.
 
-If you prefer not to edit GitHub files, contact the [Deblx Help Center](https://help.deblx.com).
+If you prefer not to edit GitHub files, contact the [Deblx Help Center](https://deblx.com/help).
 
 ## Documentation Guidelines
 
