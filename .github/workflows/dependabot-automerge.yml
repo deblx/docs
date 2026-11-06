@@ -1,31 +1,40 @@
-name: Dependabot Auto-Merge
+name: Merge Verified Dependency Updates
 
 on:
-  pull_request_target:
-    types: [opened, reopened, synchronize]
+  workflow_run:
+    workflows: ["Build and Deploy Documentation"]
+    types: [completed]
 
 permissions:
   contents: write
   pull-requests: write
 
+concurrency:
+  group: dependabot-merge
+  cancel-in-progress: false
+
 jobs:
-  enable-auto-merge:
+  merge-verified-update:
     if: >
-      github.event.pull_request.user.login == 'dependabot[bot]' &&
-      github.event.pull_request.base.ref == 'main' &&
-      github.event.pull_request.head.repo.full_name == github.repository
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.actor.login == 'dependabot[bot]' &&
+      github.event.workflow_run.head_repository.full_name == github.repository
     runs-on: ubuntu-24.04
     steps:
-      - name: Inspect Dependabot update
-        id: metadata
-        uses: dependabot/fetch-metadata@v2
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Enable auto-merge for minor and patch updates
-        if: >
-          steps.metadata.outputs.update-type == 'version-update:semver-patch' ||
-          steps.metadata.outputs.update-type == 'version-update:semver-minor'
+      - name: Merge matching Dependabot pull request after successful build
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR_URL: ${{ github.event.pull_request.html_url }}
-        run: gh pr merge --auto --squash "$PR_URL"
+          REPOSITORY: ${{ github.repository }}
+          VERIFIED_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          set -euo pipefail
+          prs=$(gh api "repos/$REPOSITORY/commits/$VERIFIED_SHA/pulls" --jq '.[] | select(.state == "open" and .base.ref == "main" and .user.login == "dependabot[bot]" and .head.repo.full_name == "'"$REPOSITORY"'" and .head.sha == "'"$VERIFIED_SHA"'") | .number')
+          if [ -z "$prs" ]; then
+            echo "No matching, open Dependabot pull request at the verified commit."
+            exit 0
+          fi
+          for pr in $prs; do
+            echo "Merging dependency update PR #$pr after successful build for $VERIFIED_SHA"
+            gh pr merge "$pr" --repo "$REPOSITORY" --squash --delete-branch --match-head-commit "$VERIFIED_SHA"
+          done

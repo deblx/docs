@@ -48,7 +48,7 @@ export default defineConfig({
   ignoreDeadLinks: false,
   sitemap: isPreview ? undefined : { hostname: siteUrl },
   head: [
-    ['link', { rel: 'icon', type: 'image/png', href: siteBase + 'favicon.png' }],
+    ['link', { rel: 'icon', type: 'image/png', href: siteBase + 'favicon-v2.png' }],
     ['meta', { name: 'theme-color', content: '#07080d' }],
     ...(isPreview ? [['meta', { name: 'robots', content: 'noindex, nofollow' }] as const] : []),
     ['meta', { property: 'og:type', content: 'website' }],

@@ -13,9 +13,6 @@ updates:
           - "vitepress"
           - "vite"
           - "vue"
-        update-types:
-          - "minor"
-          - "patch"
     labels:
       - dependencies
 

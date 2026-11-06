@@ -1,30 +1,42 @@
 ---
 title: Privacy
-description: Information about the Deblx documentation website and links to privacy resources.
+description: Hosting, essential site functionality and privacy information for Deblx Documentation.
 ---
 
 # Privacy
 
-This site provides static documentation for Deblx products.
+Deblx Documentation is a static website for Unreal Engine plugin guides. Our main privacy policy is available at **[deblx.com/privacy-policy](https://deblx.com/privacy-policy)**.
 
-## Hosting
+## Hosting – GitHub Pages
 
-The documentation is published using **GitHub Pages**. When you visit the site, your browser connects to the infrastructure used to deliver these files. The documentation may also be served through Cloudflare after the custom domain is configured.
+The documentation is built with VitePress and published on **GitHub Pages**, a hosting service provided by GitHub, Inc. Accessing the website involves communication with the hosting infrastructure, including the processing of technical connection information such as IP addresses.
 
-## Search and Preferences
+See the [Deblx Privacy Policy](https://deblx.com/privacy-policy) for general information and contact details.
 
-Documentation search runs in your browser. The site does not integrate an analytics or advertising service in its documentation source code.
+## Cloudflare
 
-VitePress may save your appearance preference locally to remember your chosen theme. Essential browser storage may not require consent, but the actual storage and network requests should be checked on the live domain before making a definitive determination.
+When the documentation is delivered through the planned `docs.deblx.com` custom domain with the Cloudflare proxy enabled, **Cloudflare** may act as an additional network, CDN and security provider. Cloudflare processes technical request information to deliver and protect the website.
 
-## External Links
+Depending on the enabled protection features, Cloudflare may use necessary security cookies such as `__cf_bm` (bot protection) or `cf_clearance` (security challenges). These cookies are **not necessarily set on every visit**. Their use depends on the actual domain, proxy configuration and activated protection rules.
 
-Links to GitHub, Fab, Discord, the Deblx website, changelog or Help Center lead to separate services, which have their own privacy terms.
+For details, see [Cloudflare's cookie documentation](https://developers.cloudflare.com/fundamentals/reference/policies-compliances/cloudflare-cookies/) and the [Deblx Privacy Policy](https://deblx.com/privacy-policy).
 
-## Deblx Privacy Information
+## Search and Appearance Preferences
 
-See the [Deblx Privacy Policy](https://deblx.com/privacy/) for information and contact details. For privacy questions, contact [support@deblx.com](mailto:support@deblx.com).
+Documentation search runs locally in the browser. VitePress can use browser storage to remember preferences such as the appearance (dark or light theme). The documentation does not intentionally embed analytics, advertising trackers or third-party marketing scripts.
 
-::: info
-This page is a documentation-specific overview, not a substitute for the privacy information that applies to the final hosting and DNS configuration.
-:::
+## Consent and Cookie Banner
+
+This documentation currently does not provide a consent banner because it is designed without optional analytics or advertising services. Technical storage and strictly necessary security cookies may be used to deliver the requested service.
+
+If optional tracking, external embeds or other non-essential technologies are added, the consent requirements must be reassessed **before** activation. The actual live domain and network requests should also be checked after the Cloudflare migration.
+
+## External Websites
+
+Links to the Deblx website, Changelog, Help Center, Fab, GitHub and Discord point to external services. Their privacy practices apply when you follow those links.
+
+## Privacy Policy and Contact
+
+- [Full Deblx Privacy Policy](https://deblx.com/privacy-policy)
+- [Deblx Support](https://deblx.com/help)
+- [Email](mailto:support@deblx.com)
