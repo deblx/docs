@@ -1,102 +1,54 @@
 ---
-sidebar_position: 2
+title: Discord Verification
+description: How to verify a purchase for a product-specific Discord role.
 ---
 
 # Discord Verification
 
-To get access to Pro products and exclusive support channels in our Discord server, you need to verify your purchase once.
+Some Deblx product-specific Discord channels may require purchase verification. Follow the current verification instructions in the [Deblx Developer Discord](https://discord-dev.deblx.com).
 
 ## Why Verification?
 
-Verification ensures that only legitimate purchasers get access to:
-- Premium support channels for Pro products
-- Exclusive tips and tricks
-- Early access to updates and beta features
-- Direct communication with the Deblx team
+Verification allows moderators to confirm purchases for areas intended for product owners.
 
 ## How to Verify
 
-1. **Join our Discord server:**
-   - [Deblx Dev Discord](https://discord.gg/UJCnVjwTTt) - For Fab users
-   - [Deblx Discord](https://discord.gg/xXVZjWFeKq) - General community
+1. Join the [Deblx Developer Discord](https://discord-dev.deblx.com).
+2. Read the server rules and find the current verification instructions.
+3. Use the **private verification method** provided by the server moderators.
+4. Submit only the information requested by that process.
 
-2. **Go to the verification channel**
+::: warning Protect your purchase information
+Do not post transaction IDs, receipts, passwords, payment details or private account information in a public Discord channel or GitHub issue. Use the current private verification method or contact support.
+:::
 
-3. **Post the following information:**
-   - **Transaction ID** - Your purchase confirmation number
-   - **Store** - Where you purchased (e.g., FAB)
-   - **Store account name** - Your username on that store
+## Information You May Need
 
-### Example Verification Message
-```
-Transaction ID: ABC123XYZ789
-Store: FAB
-Store account name: YourFabUsername
-```
-
-## Important Rules
-
-⚠️ **Each transaction can only be used ONCE**
-
-- One transaction = One Discord account
-- No sharing verification with others
-- No reusing transaction IDs
-
-❌ **Sharing or reuse will result in:**
-- Verification denial
-- Removal from premium channels
-- Potential ban from Discord server
+Depending on the product and verification process, you may need the product name, marketplace account name and a transaction reference. Only provide transaction references privately if explicitly requested through the verified process.
 
 ## After Verification
 
-Once verified, you will automatically receive:
+If the purchase is accepted, moderators can assign the applicable product role or permissions. Available channels and support options depend on the current server configuration.
 
-✅ **Access to product-specific channels:**
-- Private discussion channels
+## Troubleshooting
 
-✅ **Role badges:**
-- Visible role showing your Pro status
-- Access to Pro-only channels
+### I cannot find my transaction reference
 
-✅ **Priority support:**
-- Faster response times
-- Direct access to developers
+Check your Fab purchase confirmation or purchase history. Contact Fab support if necessary.
 
-## Need Help?
+### My verification has not been accepted
 
-**Can't find your Transaction ID?**
-- Check your purchase confirmation email
-- Log into FAB and check your purchase history
-- Contact FAB support if needed
+Review the current server instructions. If you still need help, contact [Deblx Support](/support).
 
-**Verification not working?**
-- Double-check your Transaction ID (no spaces or typos)
-- Make sure you're posting in the correct channel
-- Wait up to 24 hours for manual verification
-- Contact us: support@deblx.com
+### I own several Deblx plugins
 
-**Bought multiple products?**
-- Verify each product separately
-- Use different Transaction IDs for each
-- You'll get access to all relevant channels
-
-## Free Products
-
-If you're using **Asset Size Analyzer** (our free plugin):
-- No verification needed!
-- Join the general Discord channels
-- Get community support
-
-Verification is only required for **Pro products** (Duplicate Asset Detector Pro, Quick Notes Pro).
+Check the verification requirements for each product. The requirements may differ.
 
 ## Privacy
 
-Your transaction information is:
-- Used only for verification purposes
-- Not shared with third parties
-- Kept confidential
-- Deleted after verification (we only keep your Discord ID linked to product access)
+Send only necessary information through a verified private method. Contact [support@deblx.com](mailto:support@deblx.com) for questions about handling personal data.
 
----
+## Related Resources
 
-**Ready to verify?** Join Discord and head to the verification channel!
+- [Support & Feedback](/support)
+- [Plugin Documentation](/getting-started)

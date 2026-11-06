@@ -19,7 +19,7 @@ sidebar_position: 2
 2. Go to your **Fab Library**
 3. Find **Asset Size Analyzer**
 4. Click **Install to Engine**
-5. Select your Unreal Engine version (5.1, 5.2, 5.3, 5.4, 5.5, 5.6 or 5.7)
+5. Select **Unreal Engine 5.1+** (choose the installed version available in Fab)
 6. Click **Install**
 
 ## Enable the Plugin
@@ -40,7 +40,7 @@ After restart, you should find Asset Size Analyzer in:
 
 ## First Use
 
-On first use, the plugin will compile automatically. This is normal and only happens once. After compilation, you can start analyzing your assets immediately!
+Open the plugin after enabling it. Depending on your Unreal Engine installation, the editor may prepare assets during first launch.
 
 ## Performance Note
 

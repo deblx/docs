@@ -1,32 +1,47 @@
-name: Deploy to GitHub Pages
+name: Build and Deploy Documentation
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: deblx-docs-production
+  cancel-in-progress: false
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
     steps:
-      - uses: actions/checkout@v7
-      
-      - uses: actions/setup-node@v7
+      - name: Check out documentation
+        uses: actions/checkout@v7
         with:
-          node-version: 20
+          fetch-depth: 0
+      - name: Set up Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
           cache: npm
-          
       - name: Install dependencies
-        run: npm ci
-        
-      - name: Build website
-        run: npm run build
-        
-      - name: Deploy to GitHub Pages
+        run: npm ci --no-audit --no-fund
+      - name: Check documentation
+        run: npm run check
+      - name: Build VitePress
+        run: npm run docs:build
+      - name: Publish to GitHub Pages
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_branch: gh-pages
+          publish_dir: docs/.vitepress/dist
+          force_orphan: true
+          enable_jekyll: false
+          commit_message: 'deploy: publish VitePress documentation'
