@@ -1,32 +1,18 @@
-# Deblx
+# Deblx Documentation
 
-> Plugins by Deblx, for You! Built with Unreal Engine — available on Fab.
+Documentation for Deblx Unreal Engine plugins, powered by VitePress and GitHub Pages.
 
----
+Live site: https://deblx.github.io/docs/
 
-## 📖 Docs
+Edit the Markdown files in `docs/` and open a pull request. Merges to `main` automatically build and deploy the documentation.
 
-Documentation for each plugin lives right here   — setup, all of it.
+## Development
 
----
+```bash
+npm ci
+npm run dev
+npm run check
+npm run docs:build
+```
 
-## 💬 Discord
-
-Questions? Issues? Ideas? Come hang:
-
-- 🔧 **Deblx Dev Discord** *(for Fab users)* — [Dev Discord](https://discord-dev.deblx.com)
-- 🟣 **Deblx Discord** — [Discord](https://discord.deblx.com)
-
----
-
-## 📣 Stay in the Loop
-
-New plugins, updates, behind-the-scenes — follow Deblx:
-
-- 🐦 **X** — [@deblxofficial](https://x.com/deblxofficial)
-- 🛒 **Fab** — [All plugins in one place](https://fab.com/sellers/deblx)
----
-
-<p align="center">
-  <a href="https://deblx.com">deblx.com</a> · Made by Deblx, for You!
-</p>
+See [VITEPRESS_SETUP.md](VITEPRESS_SETUP.md) for deployment and domain setup.

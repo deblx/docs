@@ -4,10 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vitepress dev docs",
+    "dev": "node scripts/legacy-redirects.mjs && vitepress dev docs",
     "start": "vitepress dev docs",
     "build": "vitepress build docs",
-    "docs:build": "vitepress build docs",
+    "docs:build": "node scripts/legacy-redirects.mjs && vitepress build docs",
     "preview": "vitepress preview docs",
     "check": "node scripts/check-docs.mjs"
   },

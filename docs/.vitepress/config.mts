@@ -3,7 +3,8 @@ import { defineConfig } from 'vitepress'
 const github = 'https://github.com/deblx/docs'
 const changelog = 'https://changelog.deblx.com'
 const isPreview = process.env.DEBLX_DOCS_PREVIEW === 'true'
-const siteBase = isPreview ? '/docs/preview/' : '/'
+const siteBase = isPreview ? '/docs/preview/' : '/docs/'
+const siteUrl = process.env.DEBLX_DOCS_SITE_URL || 'https://deblx.github.io/docs/'
 
 const product = (title: string, slug: string) => ({
   text: title,
@@ -45,7 +46,7 @@ export default defineConfig({
   appearance: 'dark',
   lastUpdated: true,
   ignoreDeadLinks: false,
-  sitemap: isPreview ? undefined : { hostname: 'https://docs.deblx.com/' },
+  sitemap: isPreview ? undefined : { hostname: siteUrl },
   head: [
     ['link', { rel: 'icon', type: 'image/png', href: siteBase + 'favicon.png' }],
     ['meta', { name: 'theme-color', content: '#07080d' }],
@@ -56,7 +57,7 @@ export default defineConfig({
   transformHead: ({ pageData }) => {
     if (isPreview) return []
     const path = pageData.relativePath.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '')
-    const url = 'https://docs.deblx.com/' + path
+    const url = siteUrl + path
     return [['link', { rel: 'canonical', href: url }], ['meta', { property: 'og:url', content: url }]]
   },
   themeConfig: {

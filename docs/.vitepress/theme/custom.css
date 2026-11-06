@@ -162,3 +162,28 @@
 /* Use the official light brand artwork for both appearance settings. */
 :root:not(.dark) .VPNavBarTitle .logo { filter: brightness(0); }
 .dark .VPNavBarTitle .logo { filter: none; }
+
+.VPSidebarItem a.VPLink.vp-external-link-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  padding-right: 30px !important;
+}
+.VPSidebarItem a.VPLink.vp-external-link-icon .text {
+  min-width: 0;
+  max-width: 100%;
+}
+.VPSidebarItem a.VPLink.vp-external-link-icon::after {
+  position: absolute;
+  inset-inline-end: 9px;
+  top: 50%;
+  margin: 0;
+  transform: translateY(-50%);
+  flex-shrink: 0;
+}
+.VPNavBarTitle .logo {
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+}
