@@ -112,3 +112,49 @@
   .deblx-doc-footer__meta { flex-direction: column; align-items: flex-start; gap: 6px; }
   .vp-doc table { display: block; }
 }
+
+/* Documentation layout */
+:root {
+  --vp-sidebar-width: 304px;
+  --vp-layout-max-width: 1540px;
+  --vp-nav-height: 64px;
+}
+.dark {
+  --vp-c-bg: #0f1117;
+  --vp-c-bg-alt: #0b0d12;
+  --vp-c-bg-soft: #171b24;
+  --vp-c-bg-elv: #1c202a;
+  --vp-c-gutter: #1a1e27;
+  --vp-c-divider: #282d38;
+  --vp-c-text-3: #788497;
+}
+.VPNavBar { background: var(--vp-c-bg) !important; border-bottom: 1px solid var(--vp-c-divider); }
+.VPNavBarTitle .title { font-size: 17px; letter-spacing: -.045em; }
+.VPNavBarTitle .logo { width: 27px; height: 27px; }
+.VPNavBarMenuLink, .VPNavBarMenuGroup .text { font-size: 13px; }
+.VPSidebar { border-right: 1px solid var(--vp-c-divider); background: var(--vp-c-bg-alt); }
+.VPSidebarItem.level-0 > .item .text {
+  font-size: 11px; letter-spacing: .09em; text-transform: uppercase; font-weight: 720;
+}
+.VPSidebarItem.level-1 > .item .text { font-size: 13.3px; font-weight: 590; }
+.VPSidebarItem.level-2 > .item .text,
+.VPSidebarItem.level-3 > .item .text { font-size: 12.6px; font-weight: 475; }
+.VPSidebarItem .item { border-radius: 6px; }
+.VPSidebarItem .item:hover { background: var(--vp-c-brand-soft); }
+.VPSidebarItem.is-active > .item .link > .text { font-weight: 650; }
+.VPSidebarItem.level-2 > .items { border-left: 1px solid var(--vp-c-divider); margin-left: 10px; padding-left: 8px; }
+.VPDoc .content-container { max-width: 800px; }
+.VPDocAsideOutline .outline-title { color: var(--vp-c-text-2); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
+.vp-doc h1 { font-size: clamp(1.95rem, 2.65vw, 2.35rem); line-height: 1.2; }
+.vp-doc h2 { margin-top: 38px; font-size: 1.42rem; }
+.vp-doc p, .vp-doc li { line-height: 1.8; }
+.vp-doc table { display: table; width: 100%; }
+.vp-doc .custom-block { border-radius: 9px; }
+.vp-doc .custom-block.info { background: var(--vp-c-bg-soft); }
+.vp-doc .custom-block.tip { background: var(--vp-c-brand-soft); }
+.deblx-breadcrumbs { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 20px; font-size: 11px; color: var(--vp-c-text-3); }
+.deblx-breadcrumbs a { color: var(--vp-c-text-2); }
+.deblx-breadcrumbs a:hover { color: var(--vp-c-brand-1); }
+.deblx-breadcrumbs__divider { opacity: .5; }
+@media (max-width: 960px) { .VPSidebar { border-right: 0; } }
+@media (max-width: 640px) { .vp-doc table { display: block; } }

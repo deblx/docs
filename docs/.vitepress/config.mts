@@ -7,12 +7,30 @@ const product = (title: string, slug: string) => ({
   text: title,
   collapsed: true,
   items: [
-    { text: 'Overview', link: `/${slug}/` },
-    { text: 'Installation', link: `/${slug}/installation` },
-    { text: 'Features', link: `/${slug}/features` },
-    { text: 'Usage Guide', link: `/${slug}/usage` },
-    { text: 'Troubleshooting', link: `/${slug}/troubleshooting` },
-    { text: 'FAQ', link: `/${slug}/faq` }
+    {
+      text: 'Getting Started',
+      collapsed: false,
+      items: [
+        { text: 'Overview', link: '/' + slug + '/' },
+        { text: 'Installation', link: '/' + slug + '/installation' }
+      ]
+    },
+    {
+      text: 'Guides',
+      collapsed: false,
+      items: [
+        { text: 'Features', link: '/' + slug + '/features' },
+        { text: 'Usage Guide', link: '/' + slug + '/usage' }
+      ]
+    },
+    {
+      text: 'Help',
+      collapsed: false,
+      items: [
+        { text: 'Troubleshooting', link: '/' + slug + '/troubleshooting' },
+        { text: 'FAQ', link: '/' + slug + '/faq' }
+      ]
+    }
   ]
 })
 
@@ -22,6 +40,7 @@ export default defineConfig({
   lang: 'en-US',
   base: '/',
   cleanUrls: true,
+  appearance: 'dark',
   lastUpdated: true,
   ignoreDeadLinks: false,
   sitemap: { hostname: 'https://docs.deblx.com/' },
@@ -31,10 +50,24 @@ export default defineConfig({
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Deblx Documentation' }]
   ],
+  transformHead: ({ pageData }) => {
+    const path = pageData.relativePath.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '')
+    const url = 'https://docs.deblx.com/' + path
+    return [['link', { rel: 'canonical', href: url }], ['meta', { property: 'og:url', content: url }]]
+  },
   themeConfig: {
-    siteTitle: 'Deblx Docs',
+    logo: '/deblx-mark.svg',
+    siteTitle: 'Deblx',
     nav: [
-      { text: 'Documentation', link: '/' },
+      {
+        text: 'Plugins',
+        items: [
+          { text: 'Loading Screen Pro', link: '/loading-screen-pro/' },
+          { text: 'Quick Notes / ToDo', link: '/quick-notes/' },
+          { text: 'Duplicate Asset Detector Pro', link: '/duplicate-asset-detector/' },
+          { text: 'Asset Size Analyzer', link: '/asset-size-analyzer/' }
+        ]
+      },
       { text: 'Website', link: 'https://deblx.com' },
       { text: 'Changelog', link: changelog },
       { text: 'Support', link: '/support' }
@@ -44,17 +77,26 @@ export default defineConfig({
         text: 'Getting Started',
         items: [
           { text: 'Introduction', link: '/' },
-          { text: 'Support & Resources', link: '/support' },
-          { text: 'Discord Verification', link: '/verification' }
+          { text: 'Choose a Plugin', link: '/getting-started' },
+          { text: 'Compatibility', link: '/compatibility' }
         ]
       },
       {
-        text: 'Plugin Documentation',
+        text: 'Documentation',
         items: [
           product('Loading Screen Pro', 'loading-screen-pro'),
           product('Quick Notes / ToDo', 'quick-notes'),
           product('Duplicate Asset Detector Pro', 'duplicate-asset-detector'),
           product('Asset Size Analyzer', 'asset-size-analyzer')
+        ]
+      },
+      {
+        text: 'Resources',
+        items: [
+          { text: 'Glossary', link: '/glossary' },
+          { text: 'Discord Verification', link: '/verification' },
+          { text: 'Support & Feedback', link: '/support' },
+          { text: 'Changelog', link: changelog }
         ]
       }
     ],
