@@ -1,0 +1,21 @@
+name: Inspect Official Brand Assets
+
+on:
+  push:
+    branches: [vitepress-migration]
+    paths:
+      - '.github/workflows/brand-inspect.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Discover official brand asset URLs
+        run: node scripts/inspect-brand.mjs
