@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useRoute } from 'vitepress'
+import { useRoute, useData, withBase } from 'vitepress'
 
 const route = useRoute()
+const { site } = useData()
 const names: Record<string, string> = {
   'loading-screen-pro': 'Loading Screen Pro',
   'quick-notes': 'Quick Notes / ToDo',
@@ -22,7 +23,8 @@ const pages: Record<string, string> = {
   faq: 'FAQ'
 }
 const crumbs = computed(() => {
-  const path = route.path.replace(/\.html$/, '').replace(/\/+$/, '')
+  const base = site.value.base || '/'
+  const path = route.path.replace(base, '/').replace(/\.html$/, '').replace(/\/+$/, '')
   const segments = path.split('/').filter(Boolean)
   if (!segments.length) return []
   const [section, page] = segments
@@ -39,7 +41,7 @@ const crumbs = computed(() => {
   <nav v-if="crumbs.length" class="deblx-breadcrumbs" aria-label="Breadcrumb">
     <template v-for="(crumb, index) in crumbs" :key="index">
       <span v-if="index" class="deblx-breadcrumbs__divider" aria-hidden="true">/</span>
-      <a v-if="crumb.link" :href="crumb.link">{{ crumb.text }}</a>
+      <a v-if="crumb.link" :href="withBase(crumb.link)">{{ crumb.text }}</a>
       <span v-else aria-current="page">{{ crumb.text }}</span>
     </template>
   </nav>

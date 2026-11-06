@@ -1,0 +1,42 @@
+name: Publish VitePress Preview
+
+on:
+  push:
+    branches: [vitepress-migration]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deblx-docs-preview
+  cancel-in-progress: true
+
+jobs:
+  publish-preview:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out documentation
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Set up Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Validate documentation
+        run: npm run check
+      - name: Build preview
+        run: npm run docs:build
+        env:
+          DEBLX_DOCS_PREVIEW: 'true'
+      - name: Publish preview under gh-pages/preview
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: docs/.vitepress/dist
+          destination_dir: preview
+          commit_message: 'docs: refresh VitePress preview'

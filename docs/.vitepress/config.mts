@@ -2,6 +2,8 @@ import { defineConfig } from 'vitepress'
 
 const github = 'https://github.com/deblx/docs'
 const changelog = 'https://changelog.deblx.com'
+const isPreview = process.env.DEBLX_DOCS_PREVIEW === 'true'
+const siteBase = isPreview ? '/docs/preview/' : '/'
 
 const product = (title: string, slug: string) => ({
   text: title,
@@ -38,19 +40,21 @@ export default defineConfig({
   title: 'Deblx Documentation',
   description: 'Guides and technical documentation for Deblx Unreal Engine plugins.',
   lang: 'en-US',
-  base: '/',
-  cleanUrls: true,
+  base: siteBase,
+  cleanUrls: !isPreview,
   appearance: 'dark',
   lastUpdated: true,
   ignoreDeadLinks: false,
-  sitemap: { hostname: 'https://docs.deblx.com/' },
+  sitemap: isPreview ? undefined : { hostname: 'https://docs.deblx.com/' },
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: siteBase + 'favicon.svg' }],
     ['meta', { name: 'theme-color', content: '#07080d' }],
+    ...(isPreview ? [['meta', { name: 'robots', content: 'noindex, nofollow' }] as const] : []),
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Deblx Documentation' }]
   ],
   transformHead: ({ pageData }) => {
+    if (isPreview) return []
     const path = pageData.relativePath.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '')
     const url = 'https://docs.deblx.com/' + path
     return [['link', { rel: 'canonical', href: url }], ['meta', { property: 'og:url', content: url }]]
@@ -103,7 +107,7 @@ export default defineConfig({
     outline: { level: [2, 3], label: 'On this page' },
     docFooter: { prev: 'Previous', next: 'Next' },
     editLink: {
-      pattern: github + '/edit/main/docs/:path',
+      pattern: github + '/edit/' + (isPreview ? 'vitepress-migration' : 'main') + '/docs/:path',
       text: 'Edit this page on GitHub'
     },
     lastUpdated: { text: 'Last updated' },
