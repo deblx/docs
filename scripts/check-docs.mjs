@@ -3,7 +3,7 @@ import { join } from 'node:path'
 
 const source = 'docs'
 const expected = [
-  'index.md', 'verification.md', 'support.md',
+  'index.md', 'verification.md', 'support.md', 'compatibility.md', 'getting-started.md', 'workflows.md', 'privacy.md', 'contributing.md',
   ...['loading-screen-pro', 'quick-notes', 'duplicate-asset-detector', 'asset-size-analyzer'].flatMap((slug) =>
     ['index.md', 'installation.md', 'features.md', 'usage.md', 'troubleshooting.md', 'faq.md'].map((page) => `${slug}/${page}`)
   )

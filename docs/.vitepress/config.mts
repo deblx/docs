@@ -47,7 +47,7 @@ export default defineConfig({
   ignoreDeadLinks: false,
   sitemap: isPreview ? undefined : { hostname: 'https://docs.deblx.com/' },
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: siteBase + 'favicon.svg' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: 'https://deblx.com/favicon.ico' }],
     ['meta', { name: 'theme-color', content: '#07080d' }],
     ...(isPreview ? [['meta', { name: 'robots', content: 'noindex, nofollow' }] as const] : []),
     ['meta', { property: 'og:type', content: 'website' }],
@@ -60,8 +60,7 @@ export default defineConfig({
     return [['link', { rel: 'canonical', href: url }], ['meta', { property: 'og:url', content: url }]]
   },
   themeConfig: {
-    logo: '/deblx-mark.svg',
-    siteTitle: 'Deblx',
+    siteTitle: 'Deblx Docs',
     nav: [
       {
         text: 'Plugins',
@@ -74,7 +73,7 @@ export default defineConfig({
       },
       { text: 'Website', link: 'https://deblx.com' },
       { text: 'Changelog', link: changelog },
-      { text: 'Support', link: '/support' }
+      { text: 'Help Center ↗', link: 'https://help.deblx.com' }
     ],
     sidebar: [
       {
@@ -82,7 +81,8 @@ export default defineConfig({
         items: [
           { text: 'Introduction', link: '/' },
           { text: 'Choose a Plugin', link: '/getting-started' },
-          { text: 'Compatibility', link: '/compatibility' }
+          { text: 'Compatibility', link: '/compatibility' },
+          { text: 'Common Workflows', link: '/workflows' }
         ]
       },
       {
@@ -99,7 +99,10 @@ export default defineConfig({
         items: [
           { text: 'Glossary', link: '/glossary' },
           { text: 'Discord Verification', link: '/verification' },
+          { text: 'Help Center', link: 'https://help.deblx.com' },
           { text: 'Support & Feedback', link: '/support' },
+          { text: 'Privacy', link: '/privacy' },
+          { text: 'Contributing', link: '/contributing' },
           { text: 'Changelog', link: changelog }
         ]
       }
