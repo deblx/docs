@@ -3,13 +3,29 @@ updates:
   - package-ecosystem: npm
     directory: /
     schedule:
-      interval: weekly
+      interval: daily
+      time: "04:00"
+      timezone: Europe/Berlin
     open-pull-requests-limit: 5
     groups:
-      vitepress:
-        patterns: [vitepress, vue, vite]
+      vitepress-runtime:
+        patterns:
+          - "vitepress"
+          - "vite"
+          - "vue"
+        update-types:
+          - "minor"
+          - "patch"
+    labels:
+      - dependencies
+
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: weekly
+      day: monday
+      time: "04:00"
+      timezone: Europe/Berlin
     open-pull-requests-limit: 5
+    labels:
+      - dependencies

@@ -26,3 +26,9 @@ Generate and commit an updated `package-lock.json` using `npm install` before th
 Run `npm run check` for a page inventory check and `npm run docs:build` for static rendering and internal-link validation.
 
 Older article content has been preserved during the first migration pass; technical facts about current plugin versions should be reviewed before public cutover.
+
+## Dependency maintenance
+
+Dependabot checks npm dependencies daily and GitHub Actions weekly. Patch and minor dependency pull requests are eligible for GitHub auto-merge after required status checks pass; major updates stay for manual review. GitHub repository settings must allow auto-merge and protect the main branch with required VitePress CI checks. Without those repository settings, the auto-merge workflow cannot complete automatically.
+
+Install dependencies using `npm ci` for reproducible builds. The repository's `package-lock.json` is committed and must be updated alongside dependency versions. No WordPress installation or WordPress plugins are involved in this documentation website.
