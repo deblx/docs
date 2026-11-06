@@ -1,0 +1,45 @@
+name: Verify Dependencies and Documentation
+
+on:
+  push:
+    branches: [audit-domain-readiness]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+      - name: Set up Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Audit installed dependency tree
+        run: |
+          npm audit --json > dependency-audit.json || true
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs'
+          const report = JSON.parse(fs.readFileSync('dependency-audit.json', 'utf8'))
+          console.log('Dependency audit summary:', JSON.stringify(report.metadata?.vulnerabilities ?? {}))
+          for (const [name, v] of Object.entries(report.vulnerabilities ?? {})) {
+            console.log(JSON.stringify({
+              name,
+              severity: v.severity,
+              isDirect: v.isDirect,
+              via: v.via.map(x => typeof x === 'string' ? x : x.title),
+              fixAvailable: v.fixAvailable
+            }))
+          }
+          console.log('Total current vulnerabilities:', report.metadata?.vulnerabilities?.total ?? 'unknown')
+          NODE
+      - name: Validate documentation
+        run: npm run check
+      - name: Production build
+        run: npm run docs:build
