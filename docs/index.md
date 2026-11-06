@@ -1,8 +1,3 @@
----
-sidebar_position: 1
-slug: /
----
-
 # Welcome to Deblx Documentation
 
 Professional Unreal Engine plugins built by developers, for developers. All plugins are available on the [Fab Marketplace](https://www.fab.com/de/sellers/Deblx).
@@ -39,3 +34,15 @@ Have questions or need help? Join our Discord community:
 ## Getting Started
 
 Choose a plugin above to view its documentation, including installation instructions, feature guides, and usage examples.
+
+---
+
+## More Resources
+
+- [Changelog](https://changelog.deblx.com) — product updates and release notes.
+- [Support & Resources](/support) — help, feedback and issue reporting.
+- [Discord Verification](/verification) — purchase verification guidance.
+
+::: tip
+Use the navigation on the left to explore installation, features and usage guides for each plugin. The table of contents on the right shows sections within the current article.
+:::
