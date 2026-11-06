@@ -7,22 +7,22 @@ Professional Unreal Engine plugins built by developers, for developers. All plug
 ### Loading Screen Pro (PRO)
 Replace the default black screen with a fully animated, cinematic loading experience. Slideshow, music, hints, multiple progress bar and spinner styles — configured entirely through a Data Asset, no C++ required.
 
-[Learn more →](/loading-screen-pro)
+[Learn more →](/loading-screen-pro/)
 
 ### Quick Notes (PRO)
 Create TODO notes directly in your viewport and on Blueprint nodes with centralized management. Perfect for keeping track of development tasks across your entire project.
 
-[Learn more →](/quick-notes)
+[Learn more →](/quick-notes/)
 
 ### Duplicate Asset Detector (PRO)
 Find and manage duplicate assets in your UE5 projects with advanced detection algorithms, asset health scoring, and AI-powered recommendations to optimize your project size.
 
-[Learn more →](/duplicate-asset-detector)
+[Learn more →](/duplicate-asset-detector/)
 
 ### Asset Size Analyzer
 Analyze asset sizes and optimize your project performance. Get detailed insights into which assets are consuming the most space and identify optimization opportunities.
 
-[Learn more →](/asset-size-analyzer)
+[Learn more →](/asset-size-analyzer/)
 
 ## Support
 
