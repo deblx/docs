@@ -1,6 +1,11 @@
-# Support & Resources
+---
+title: Support & Feedback
+description: How to get help with Deblx products.
+---
 
-Find answers in the plugin documentation or contact Deblx for help with installation, configuration and product issues.
+# Support & Feedback
+
+Find product guides, report bugs and request assistance with Deblx plugins.
 
 ## Product Guides
 
@@ -9,28 +14,35 @@ Find answers in the plugin documentation or contact Deblx for help with installa
 - [Duplicate Asset Detector Pro](/duplicate-asset-detector/)
 - [Asset Size Analyzer](/asset-size-analyzer/)
 
-Each guide includes installation steps, features, usage examples, troubleshooting and frequently asked questions.
+## Reporting an Issue
 
-## Report an Issue
+Please include:
 
-For a technical issue, include the plugin name, Unreal Engine version, steps to reproduce, and any relevant logs or error messages.
+1. Product name and version.
+2. Unreal Engine version.
+3. Steps to reproduce the issue.
+4. Expected and actual results.
+5. Relevant sanitized logs or screenshots.
 
-- **Email:** [support@deblx.com](mailto:support@deblx.com)
-- **GitHub:** [Deblx repositories](https://github.com/deblx)
-- **Community:** [Deblx Developer Discord](https://discord-dev.deblx.com)
+## Contact & Community
 
-For purchase verification, read the [Discord Verification](/verification) guide. Do not publish transaction details in public issue trackers.
+- [Deblx Developer Discord](https://discord-dev.deblx.com) — developer discussions.
+- [GitHub](https://github.com/deblx) — issue trackers for applicable plugins.
+- [support@deblx.com](mailto:support@deblx.com) — direct support.
+- [Deblx Website](https://deblx.com) — general information.
+
+::: warning Security and privacy
+Do not publish credentials, private project information or transaction IDs in public tickets. Report security concerns privately through support email.
+:::
 
 ## Releases & Updates
 
-See the [Deblx Changelog](https://changelog.deblx.com) for product announcements and release notes.
+The [Deblx Changelog](https://changelog.deblx.com) contains product news and release announcements. More news is available at [Deblx News](https://news.deblx.com).
 
-## Other Links
+## Purchase Verification
 
-- [Deblx website](https://deblx.com)
-- [Plugins on Fab](https://www.fab.com/de/sellers/Deblx)
-- [Documentation repository](https://github.com/deblx/docs)
+Read [Discord Verification](/verification) if your product requires a purchaser-only Discord role.
 
----
+## Improve the Documentation
 
-Need to correct or expand an article? Use **Edit this page on GitHub** at the bottom of the article.
+Every page includes **Edit this page on GitHub**. Corrections and additions can be proposed through [deblx/docs](https://github.com/deblx/docs).

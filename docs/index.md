@@ -1,48 +1,56 @@
-# Welcome to Deblx Documentation
+---
+title: Deblx Documentation
+description: Setup guides and product documentation for Deblx Unreal Engine plugins.
+---
 
-Professional Unreal Engine plugins built by developers, for developers. All plugins are available on the [Fab Marketplace](https://www.fab.com/de/sellers/Deblx).
+# Deblx Documentation
 
-## Our Plugins
+Welcome to the documentation for Unreal Engine plugins by Deblx. Browse installation guides, features, practical workflows and common issue solutions.
 
-### Loading Screen Pro (PRO)
-Replace the default black screen with a fully animated, cinematic loading experience. Slideshow, music, hints, multiple progress bar and spinner styles — configured entirely through a Data Asset, no C++ required.
+::: info Getting Started
+New here? [Choose a Plugin](/getting-started) or select a product from the navigation on the left. For updates, visit the [Deblx Changelog](https://changelog.deblx.com).
+:::
 
-[Learn more →](/loading-screen-pro/)
+## Plugin Documentation
 
-### Quick Notes (PRO)
-Create TODO notes directly in your viewport and on Blueprint nodes with centralized management. Perfect for keeping track of development tasks across your entire project.
+### Loading Screen Pro
 
-[Learn more →](/quick-notes/)
+Create cinematic loading screens with slideshows, progress indicators, tips, music and configurable transitions. Basic setup uses a Data Asset without C++.
 
-### Duplicate Asset Detector (PRO)
-Find and manage duplicate assets in your UE5 projects with advanced detection algorithms, asset health scoring, and AI-powered recommendations to optimize your project size.
+[Overview](/loading-screen-pro/) · [Installation](/loading-screen-pro/installation) · [Usage](/loading-screen-pro/usage)
 
-[Learn more →](/duplicate-asset-detector/)
+### Quick Notes / ToDo
+
+Track TODOs, bug markers and reminders in your viewport and Blueprint Editor with a centralized overview panel.
+
+[Overview](/quick-notes/) · [Installation](/quick-notes/installation) · [Usage](/quick-notes/usage)
+
+### Duplicate Asset Detector Pro
+
+Identify duplicate content, inspect dependencies and review cleanup operations before removing redundant assets.
+
+[Overview](/duplicate-asset-detector/) · [Installation](/duplicate-asset-detector/installation) · [Usage](/duplicate-asset-detector/usage)
 
 ### Asset Size Analyzer
-Analyze asset sizes and optimize your project performance. Get detailed insights into which assets are consuming the most space and identify optimization opportunities.
 
-[Learn more →](/asset-size-analyzer/)
+Inspect asset disk size and estimated runtime memory usage, filter results and export reports to CSV.
 
-## Support
+[Overview](/asset-size-analyzer/) · [Installation](/asset-size-analyzer/installation) · [Usage](/asset-size-analyzer/usage)
 
-Have questions or need help? Join our Discord community:
+## How to Begin
 
-- 🔧 [Deblx Dev Discord](https://discord.gg/UJCnVjwTTt) - For Fab users
-- 🟣 [Deblx Discord](https://discord.gg/xXVZjWFeKq) - General community
-
-## Getting Started
-
-Choose a plugin above to view its documentation, including installation instructions, feature guides, and usage examples.
-
----
+1. [Choose the right plugin](/getting-started) for your task.
+2. Check [engine compatibility](/compatibility) and install the tool through [Fab](https://www.fab.com/de/sellers/Deblx).
+3. Follow the corresponding installation and usage guides.
+4. Check the troubleshooting or FAQ section if something is unclear.
 
 ## More Resources
 
-- [Changelog](https://changelog.deblx.com) — product updates and release notes.
-- [Support & Resources](/support) — help, feedback and issue reporting.
-- [Discord Verification](/verification) — purchase verification guidance.
+- [Support & Feedback](/support) — ask questions, suggest improvements or report issues.
+- [Discord Verification](/verification) — product verification instructions.
+- [Deblx Changelog](https://changelog.deblx.com) — release notes and maintenance updates.
+- [Deblx Developer Discord](https://discord-dev.deblx.com) — developer discussions.
 
-::: tip
-Use the navigation on the left to explore installation, features and usage guides for each plugin. The table of contents on the right shows sections within the current article.
+::: tip Improve this documentation
+Every article includes an **Edit this page on GitHub** link. Contributions can be proposed through the [documentation repository](https://github.com/deblx/docs).
 :::
