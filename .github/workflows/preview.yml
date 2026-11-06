@@ -28,6 +28,8 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Validate documentation
         run: npm run check
+      - name: Verify production build
+        run: npm run docs:build
       - name: Build preview
         run: npm run docs:build
         env:
