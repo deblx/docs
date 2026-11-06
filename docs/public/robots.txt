@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://deblx.github.io/docs/sitemap.xml
+Sitemap: https://docs.deblx.com/sitemap.xml

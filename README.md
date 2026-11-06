@@ -2,7 +2,7 @@
 
 Documentation for Deblx Unreal Engine plugins, powered by VitePress and GitHub Pages.
 
-Live site: https://deblx.github.io/docs/
+Live site: https://docs.deblx.com/
 
 Edit the Markdown files in `docs/` and open a pull request. Merges to `main` automatically build and deploy the documentation.
 

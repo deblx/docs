@@ -41,6 +41,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
+          cname: docs.deblx.com
           publish_dir: docs/.vitepress/dist
           force_orphan: true
           enable_jekyll: false
