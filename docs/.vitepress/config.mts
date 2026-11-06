@@ -47,7 +47,7 @@ export default defineConfig({
   ignoreDeadLinks: false,
   sitemap: isPreview ? undefined : { hostname: 'https://docs.deblx.com/' },
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: 'https://deblx.com/favicon.ico' }],
+    ['link', { rel: 'icon', type: 'image/png', href: siteBase + 'favicon.png' }],
     ['meta', { name: 'theme-color', content: '#07080d' }],
     ...(isPreview ? [['meta', { name: 'robots', content: 'noindex, nofollow' }] as const] : []),
     ['meta', { property: 'og:type', content: 'website' }],
@@ -60,6 +60,7 @@ export default defineConfig({
     return [['link', { rel: 'canonical', href: url }], ['meta', { property: 'og:url', content: url }]]
   },
   themeConfig: {
+    logo: '/deblx-logo.png',
     siteTitle: 'Deblx Docs',
     nav: [
       {
