@@ -31,6 +31,10 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
+      - name: Verify dependency auto-merge script
+        run: |
+          node --check scripts/merge-dependabot.mjs
+          node --test scripts/merge-dependabot.test.mjs
       - name: Check production dependency advisories
         run: npm audit --omit=dev --audit-level=moderate
       - name: Check documentation
