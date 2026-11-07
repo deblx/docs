@@ -2,7 +2,8 @@ import { execFileSync } from 'node:child_process'
 import { readFileSync } from 'node:fs'
 
 const repo = process.env.GITHUB_REPOSITORY
-if (!/^[\\w.-]+\\/[\\w.-]+$/.test(repo ?? '')) {
+const parts = repo?.split('/') ?? []
+if (parts.length !== 2 || parts.some(part => !part || !/^[a-zA-Z0-9_.-]+$/.test(part))) {
   throw new Error('Expected a GitHub repository in owner/repo format')
 }
 
