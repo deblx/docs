@@ -101,10 +101,10 @@ export default defineConfig({
         items: [
           { text: 'Glossary', link: '/glossary' },
           { text: 'Discord Verification', link: '/verification' },
-          { text: 'Support Portal', link: 'https://deblx.com/help' },
           { text: 'Support & Feedback', link: '/support' },
           { text: 'Privacy', link: '/privacy' },
           { text: 'Contributing', link: '/contributing' },
+          { text: 'Support Portal', link: 'https://deblx.com/help' },
           { text: 'Changelog', link: changelog }
         ]
       }

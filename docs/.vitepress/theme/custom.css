@@ -163,23 +163,22 @@
 :root:not(.dark) .VPNavBarTitle .logo { filter: brightness(0); }
 .dark .VPNavBarTitle .logo { filter: none; }
 
+/* Keep external-link arrows immediately beside the sidebar label. */
 .VPSidebarItem a.VPLink.vp-external-link-icon {
-  position: relative;
   display: flex;
   align-items: center;
   min-width: 0;
-  padding-right: 30px !important;
+  padding-right: 0 !important;
 }
 .VPSidebarItem a.VPLink.vp-external-link-icon .text {
+  flex: 0 1 auto;
   min-width: 0;
-  max-width: 100%;
+  max-width: calc(100% - 20px);
 }
 .VPSidebarItem a.VPLink.vp-external-link-icon::after {
-  position: absolute;
-  inset-inline-end: 9px;
-  top: 50%;
-  margin: 0;
-  transform: translateY(-50%);
+  position: static;
+  margin: 0 0 0 6px;
+  transform: none;
   flex-shrink: 0;
 }
 .VPNavBarTitle .logo {
