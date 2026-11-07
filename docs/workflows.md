@@ -57,7 +57,7 @@ See the [complete configuration guide](/loading-screen-pro/usage) and [troublesh
 
 ## Keeping the Project Clean
 
-A regular maintenance pass can combine all four tools:
+A regular maintenance pass can combine these tools:
 
 | Goal | Recommended guide |
 | --- | --- |
