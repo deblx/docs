@@ -4,37 +4,39 @@ on:
   workflow_run:
     workflows: ["Build and Deploy Documentation"]
     types: [completed]
+  schedule:
+    - cron: "17 05 * * *"
+  workflow_dispatch:
 
 permissions:
+  actions: read
   contents: write
   pull-requests: write
 
 concurrency:
-  group: dependabot-merge
+  group: deblx-dependabot-verified-merges
   cancel-in-progress: false
 
 jobs:
   merge-verified-update:
     if: >
-      github.event.workflow_run.event == 'pull_request' &&
-      github.event.workflow_run.conclusion == 'success' &&
-      github.event.workflow_run.actor.login == 'dependabot[bot]' &&
-      github.event.workflow_run.head_repository.full_name == github.repository
+      github.event_name != 'workflow_run' ||
+      (
+        github.event.workflow_run.event == 'pull_request' &&
+        github.event.workflow_run.conclusion == 'success' &&
+        github.event.workflow_run.actor.login == 'dependabot[bot]'
+      )
     runs-on: ubuntu-24.04
     steps:
-      - name: Merge matching Dependabot pull request after successful build
+      - name: Check out trusted maintenance script
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Merge verified Dependabot updates (patch, minor and major)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPOSITORY: ${{ github.repository }}
-          VERIFIED_SHA: ${{ github.event.workflow_run.head_sha }}
-        run: |
-          set -euo pipefail
-          prs=$(gh api "repos/$REPOSITORY/commits/$VERIFIED_SHA/pulls" --jq '.[] | select(.state == "open" and .base.ref == "main" and .user.login == "dependabot[bot]" and .head.repo.full_name == "'"$REPOSITORY"'" and .head.sha == "'"$VERIFIED_SHA"'") | .number')
-          if [ -z "$prs" ]; then
-            echo "No matching, open Dependabot pull request at the verified commit."
-            exit 0
-          fi
-          for pr in $prs; do
-            echo "Merging dependency update PR #$pr after successful build for $VERIFIED_SHA"
-            gh pr merge "$pr" --repo "$REPOSITORY" --squash --delete-branch --match-head-commit "$VERIFIED_SHA"
-          done
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
+          GITHUB_EVENT_PATH: ${{ github.event_path }}
+        run: node scripts/merge-dependabot.mjs

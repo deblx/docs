@@ -45,3 +45,13 @@ Dependabot checks npm daily and GitHub Actions weekly, including major upgrades.
 ## Security and privacy
 
 The published site is static. No analytics or advertising scripts are configured by the documentation. GitHub Pages and optionally Cloudflare serve requests. See [Deblx Privacy Policy](https://deblx.com/privacy-policy). Recheck cookies after turning on Cloudflare proxy.
+
+## Informational privacy notice
+
+The website displays a lightweight, English informational banner about strictly necessary cookies and local storage. It is not a tracking-consent manager. A dismissed banner is remembered in localStorage; the page includes no analytics or advertising scripts. The full privacy policy is at https://deblx.com/privacy-policy.
+
+## Dependabot verification and fallback
+
+The trusted merge workflow listens for successful Dependabot PR builds and checks the exact head SHA, PR author, repository and base branch. It additionally scans open Dependabot PRs once per day, so an event failure is less likely to leave them open indefinitely. Patch, minor and stable major updates all qualify; prerelease versions are not automatically requested. A failed build is never auto-merged. GitHub Actions must grant the workflow a write-capable token, and branch protection may impose extra merge requirements.
+
+The documentation is built statically. Build-time development-tool advisories may remain until VitePress upstream releases compatible fixes; do not force unsupported Vite overrides solely to silence advisory counts.
