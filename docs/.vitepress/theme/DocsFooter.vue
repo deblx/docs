@@ -12,7 +12,7 @@ import { withBase } from 'vitepress'
       <a href="https://github.com/deblx/docs" target="_blank" rel="noopener noreferrer">GitHub</a>
     </div>
     <div class="deblx-doc-footer__meta">
-      <span>© {{ new Date().getFullYear() }} Deblx</span>
+      <span>© {{ new Date().getFullYear() }} Deblx. All rights reserved.</span>
       <span>Hosted on <a href="https://pages.github.com" target="_blank" rel="noopener noreferrer">GitHub Pages</a></span>
     </div>
   </footer>
