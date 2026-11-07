@@ -9,7 +9,7 @@ Plugin compatibility depends on the product version and the Unreal Engine releas
 
 ## Unreal Engine Versions
 
-All four current Deblx plugins support **Unreal Engine 5.1+**. Choose the exact engine version that is available for the plugin in your Fab Library.
+All plugins support **Unreal Engine 5.1+**. Choose the exact engine version that is available for the plugin in your Fab Library.
 
 ::: info
 Some older installation guides mention engine versions available at the time they were written. Confirm availability in Fab before installing a plugin into a new Unreal Engine version.

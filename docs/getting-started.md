@@ -5,7 +5,7 @@ description: Find the right Deblx plugin for your Unreal Engine workflow.
 
 # Choose a Plugin
 
-Select the tool that matches your current Unreal Engine workflow. All four plugins support **Unreal Engine 5.1+**.
+Select the tool that matches your current Unreal Engine workflow. All plugins support **Unreal Engine 5.1+**.
 
 ## Loading Screen Pro
 
