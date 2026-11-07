@@ -28,14 +28,12 @@ Please include:
 
 **[Open the Deblx Help Center](https://deblx.com/help)** to submit a support request or report an issue through the support portal.
 
-
 - [Deblx Developer Discord](https://discord-dev.deblx.com) — developer discussions.
 - [GitHub](https://github.com/deblx) — issue trackers for applicable plugins.
-- [support@deblx.com](mailto:support@deblx.com) — direct support.
 - [Deblx Website](https://deblx.com) — general information.
 
 ::: warning Security and privacy
-Do not publish credentials, private project information or transaction IDs in public tickets. Report security concerns privately through support email.
+Do not publish credentials, private project information or transaction IDs in public tickets. Report security concerns privately through the [Deblx Help Center](https://deblx.com/help).
 :::
 
 ## Releases & Updates
