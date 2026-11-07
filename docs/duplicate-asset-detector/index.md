@@ -6,6 +6,10 @@ sidebar_position: 1
 
 Duplicate Asset Detector Pro is a powerful editor tool that helps you find and clean up duplicate assets in your Unreal Engine projects. Save disk space, reduce build times, and keep your project organized with intelligent duplicate detection.
 
+::: info Actively Maintained
+This plugin is actively maintained by Deblx. We provide bug fixes, Unreal Engine compatibility updates, and improvements as needed. See the [Deblx Changelog](https://changelog.deblx.com) for the latest releases.
+:::
+
 ## Why You Need This Tool
 
 Over time, Unreal projects accumulate duplicate assets - copied textures, materials, meshes, and more. These duplicates waste disk space, increase build times, and make your project harder to maintain. Our Plugin solves this problem with advanced content-based detection that finds true duplicates, not just similarly named files.
