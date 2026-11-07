@@ -1,40 +1,47 @@
-# Documentation Development
+# Deblx Docs – Domain Cutover
 
-This repository uses VitePress.
+This branch prepares the documentation for `docs.deblx.com`. **Do not merge before GitHub Pages and DNS are configured and ready**: merging changes the VitePress production base path from `/docs/` to `/` and updates canonical URLs.
 
-## Local preview
+## Existing site
 
-- Install dependencies: `npm install`
-- Run locally: `npm run dev`
-- Build: `npm run docs:build`
-- Preview the build: `npm run preview`
+- Current: https://deblx.github.io/docs/
+- Target: https://docs.deblx.com/
+- Source: public repository `deblx/docs`, branch `main`
+- Publishing: GitHub Actions builds static files and publishes to the `gh-pages` branch.
+- Preview source: `vitepress-migration` (until that branch is retired).
 
-The source files are in `docs/`. The theme configuration is in `docs/.vitepress/`. Documentation updates can be made directly through GitHub using the edit link on each article.
+## Coordinated cutover
 
-## Publishing
+1. Verify ownership of `deblx.com` in GitHub Pages' domain verification settings if possible.
+2. In **deblx/docs → Settings → Pages**, keep **Deploy from a branch → gh-pages / (root)** and set **Custom domain** to `docs.deblx.com`. Save before changing DNS.
+3. In **Cloudflare → deblx.com → DNS**, add/update this record:
+   - Type: `CNAME`
+   - Name: `docs`
+   - Target: `deblx.github.io` (never append `/docs`)
+   - Proxy status: **DNS only** initially
+   - TTL: Auto
+   Remove conflicting `docs` A/AAAA/CNAME records.
+4. Wait for Pages DNS verification / certificate issuance. Enable **Enforce HTTPS** when available. Check `https://docs.deblx.com/` and GitHub Pages configuration before merging.
+5. Merge the domain branch. Its deployment publishes a root-based VitePress build, `CNAME`, canonical URLs and sitemap for the custom domain.
+6. Validate the home page, plugin paths, images, local search, external link icons, sitemap, and GitHub edit links. Confirm that the original `deblx.github.io/docs/` URL redirects correctly.
+7. After HTTPS works reliably, optionally switch Cloudflare to **Proxied**. Use **Full (strict)** SSL/TLS, retain HTTPS, and check that Cloudflare caching/bot rules do not break client-side navigation. Review actual cookies and privacy disclosure when proxying.
 
-The `vitepress-migration` branch is used for migration and build validation. It never deploys to GitHub Pages.
+The main repository's custom-domain setting is not editable through the connected GitHub content tools. The Cloudflare DNS record also requires access to the user's Cloudflare dashboard.
 
-After reviewing the migration and verifying the 17 original articles, merge to `main`. Keep GitHub Pages set to **Deploy from a branch → gh-pages / (root)**. Production is published through `peaceiris/actions-gh-pages`, preserving existing project-site setup. The current live site is https://deblx.github.io/docs/. A later custom-domain cutover requires updating the VitePress production base to `/`, then configuring GitHub Pages custom-domain settings and Cloudflare DNS.
+## Validation
 
-The GitHub Actions build publishes from `main` only. The current production base path is `/docs/` for the GitHub Pages project site. Before using `docs.deblx.com`, set the base to `/` and change canonical / sitemap hostnames.
+```bash
+npm ci
+npm run check
+npm run docs:build
+```
 
-Generate and commit an updated `package-lock.json` using `npm install` before the production cutover. After the lockfile is updated, switch the workflow install command to `npm ci` for reproducible deployments.
-
-## Content checks
-
-Run `npm run check` for a page inventory check and `npm run docs:build` for static rendering and internal-link validation.
-
-Older article content has been preserved during the first migration pass; technical facts about current plugin versions should be reviewed before public cutover.
+Pull requests must build without being deployed. No additional paid hosting is needed.
 
 ## Dependency maintenance
 
-Dependabot checks npm dependencies daily and GitHub Actions weekly. Patch and minor dependency pull requests are eligible for GitHub auto-merge after required status checks pass; major updates stay for manual review. GitHub repository settings must allow auto-merge and protect the main branch with required VitePress CI checks. Without those repository settings, the auto-merge workflow cannot complete automatically.
+Dependabot checks npm daily and GitHub Actions weekly, including major upgrades. The merge workflow is configured to merge approved-by-build Dependabot updates; successful end-to-end automated dependency merging is not yet verified. Monitor the workflow and security alerts.
 
-Install dependencies using `npm ci` for reproducible builds. The repository's `package-lock.json` is committed and must be updated alongside dependency versions. No WordPress installation or WordPress plugins are involved in this documentation website.
+## Security and privacy
 
-## Automatic dependency upgrades
-
-Dependabot checks npm dependencies daily and GitHub Actions weekly, including major releases. The merge workflow waits for a successful **Build and Deploy Documentation** pull-request run, verifies the exact Dependabot head commit and merges it directly into `main`. The resulting push builds and deploys the updated docs automatically. Failed builds are not automatically merged. This does not depend on the repository's `Allow auto-merge` setting.
-
-For major upgrades, technical build success is not a complete substitute for visual and functional validation; monitor GitHub Actions notifications and roll back if regressions appear.
+The published site is static. No analytics or advertising scripts are configured by the documentation. GitHub Pages and optionally Cloudflare serve requests. See [Deblx Privacy Policy](https://deblx.com/privacy-policy). Recheck cookies after turning on Cloudflare proxy.

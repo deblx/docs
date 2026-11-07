@@ -3,8 +3,8 @@ import { defineConfig } from 'vitepress'
 const github = 'https://github.com/deblx/docs'
 const changelog = 'https://changelog.deblx.com'
 const isPreview = process.env.DEBLX_DOCS_PREVIEW === 'true'
-const siteBase = isPreview ? '/docs/preview/' : '/docs/'
-const siteUrl = process.env.DEBLX_DOCS_SITE_URL || 'https://deblx.github.io/docs/'
+const siteBase = isPreview ? '/docs/preview/' : '/'
+const siteUrl = process.env.DEBLX_DOCS_SITE_URL || 'https://docs.deblx.com/'
 
 const product = (title: string, slug: string) => ({
   text: title,
