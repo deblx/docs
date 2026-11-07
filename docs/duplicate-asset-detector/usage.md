@@ -137,7 +137,7 @@ Before shipping:
 **Cause:** Rare edge cases with complex assets
 
 **Solution:**
-- Report to support@deblx.com or Discord
+- Report the issue through the [Deblx Help Center](https://deblx.com/help) or Discord
 - Exclude the specific asset from cleanup
 
 ### Scan Takes Too Long

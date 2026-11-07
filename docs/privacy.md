@@ -39,4 +39,3 @@ Links to the Deblx website, Changelog, Help Center, Fab, GitHub and Discord poin
 
 - [Full Deblx Privacy Policy](https://deblx.com/privacy-policy)
 - [Deblx Support](https://deblx.com/help)
-- [Email](mailto:support@deblx.com)

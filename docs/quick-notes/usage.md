@@ -227,7 +227,7 @@ Create periodic exports:
 **Solution:**
 - Note the error code
 - Check Output Log for details
-- Contact support@deblx.com with the code
+- Submit the error code via the [Deblx Help Center](https://deblx.com/help)
 - Or ask in [Deblx Dev Discord](https://discord.gg/UJCnVjwTTt)
 
 ## Keyboard Shortcuts

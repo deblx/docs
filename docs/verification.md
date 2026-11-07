@@ -46,7 +46,7 @@ Check the verification requirements for each product. The requirements may diffe
 
 ## Privacy
 
-Send only necessary information through a verified private method. Contact [support@deblx.com](mailto:support@deblx.com) for questions about handling personal data.
+Send only necessary information through a verified private method. For questions about handling personal data, use the [Deblx Help Center](https://deblx.com/help).
 
 ## Related Resources
 

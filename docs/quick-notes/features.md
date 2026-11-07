@@ -173,5 +173,5 @@ By default, note data is not included in version control. This is intentional - 
 
 Need help? Contact us:
 - [Deblx Dev Discord](https://discord.gg/UJCnVjwTTt) - Fast community support
-- Email: support@deblx.com
+- [Deblx Help Center](https://deblx.com/help) - Submit a support request
 - Include error codes (QN-XXX) for faster diagnosis
