@@ -15,7 +15,7 @@ See the [Deblx Privacy Policy](https://deblx.com/privacy-policy) for general inf
 
 ## Cloudflare
 
-When the documentation is delivered through the planned `docs.deblx.com` custom domain with the Cloudflare proxy enabled, **Cloudflare** may act as an additional network, CDN and security provider. Cloudflare processes technical request information to deliver and protect the website.
+Cloudflare manages the DNS for `docs.deblx.com`. When the DNS record is set to **DNS only**, browsers connect directly to GitHub Pages rather than passing through Cloudflare's HTTP proxy. If Cloudflare's proxy is enabled later, Cloudflare may additionally process technical requests to deliver and protect the website.
 
 Depending on the enabled protection features, Cloudflare may use necessary security cookies such as `__cf_bm` (bot protection) or `cf_clearance` (security challenges). These cookies are **not necessarily set on every visit**. Their use depends on the actual domain, proxy configuration and activated protection rules.
 
@@ -27,9 +27,9 @@ Documentation search runs locally in the browser. VitePress can use browser stor
 
 ## Consent and Cookie Banner
 
-This documentation currently does not provide a consent banner because it is designed without optional analytics or advertising services. Technical storage and strictly necessary security cookies may be used to deliver the requested service.
+This documentation displays an informational notice about essential cookies and local storage. It does not request advertising or analytics consent because these optional services are not integrated. The notice is dismissed using a browser local-storage preference; technical and strictly necessary security storage may be used to deliver the requested service.
 
-If optional tracking, external embeds or other non-essential technologies are added, the consent requirements must be reassessed **before** activation. The actual live domain and network requests should also be checked after the Cloudflare migration.
+If optional tracking, external embeds or other non-essential technologies are added, the consent requirements must be reassessed **before** activation. Actual cookies and network requests should be reviewed whenever the hosting or Cloudflare proxy configuration changes.
 
 ## External Websites
 

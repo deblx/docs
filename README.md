@@ -1,18 +1,16 @@
 # Deblx Documentation
 
-Documentation for Deblx Unreal Engine plugins, powered by VitePress and GitHub Pages.
+Welcome to the official documentation for **Deblx Unreal Engine plugins**.
 
-Live site: https://docs.deblx.com/
+Find installation instructions, feature guides, usage examples, troubleshooting tips, and answers to frequently asked questions for our tools:
 
-Edit the Markdown files in `docs/` and open a pull request. Merges to `main` automatically build and deploy the documentation.
+- [Loading Screen Pro](https://docs.deblx.com/loading-screen-pro/)
+- [Quick Notes / ToDo](https://docs.deblx.com/quick-notes/)
+- [Duplicate Asset Detector Pro](https://docs.deblx.com/duplicate-asset-detector/)
+- [Asset Size Analyzer](https://docs.deblx.com/asset-size-analyzer/)
 
-## Development
+**[Explore the documentation →](https://docs.deblx.com/)**
 
-```bash
-npm ci
-npm run dev
-npm run check
-npm run docs:build
-```
+Need assistance or want to share feedback? Visit the [Deblx Support Center](https://deblx.com/help).
 
-See [VITEPRESS_SETUP.md](VITEPRESS_SETUP.md) for deployment and domain setup.
+Documentation improvements are welcome via GitHub. You can select **Edit this page on GitHub** on any documentation page to suggest a correction.
