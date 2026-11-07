@@ -6,6 +6,10 @@ sidebar_position: 1
 
 Professional loading screen system for Unreal Engine. Replace the default black screen with a fully animated, cinematic loading experience — configured entirely through a Data Asset, no C++ required.
 
+::: info Actively Maintained
+This plugin is actively maintained by Deblx. We provide bug fixes, Unreal Engine compatibility updates, and improvements as needed. See the [Deblx Changelog](https://changelog.deblx.com) for the latest releases.
+:::
+
 ## What it does
 
 - **Media slideshow** with images and 6 transition effects (Fade, Slide, Zoom In, Fade to Black, Cut)

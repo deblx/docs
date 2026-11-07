@@ -6,6 +6,10 @@ sidebar_position: 1
 
 Quick Notes is a lightweight editor tool that lets you place TODO notes, bug markers, and reminders directly in the Viewport and Blueprint Editor. Stay organized, track issues, and never lose context — all without leaving Unreal Engine.
 
+::: info Actively Maintained
+This plugin is actively maintained by Deblx. We provide bug fixes, Unreal Engine compatibility updates, and improvements as needed. See the [Deblx Changelog](https://changelog.deblx.com) for the latest releases.
+:::
+
 ## Why You Need This Tool
 
 Game development is complex. Bugs appear during playtesting, level designers spot issues mid-work, and ideas pop up at the worst moments. Instead of switching to external tools like Trello or sticky notes on your monitor, Quick Notes lets you pin notes exactly where the problem is — right in your scene or on a Blueprint node.

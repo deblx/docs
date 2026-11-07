@@ -6,6 +6,10 @@ sidebar_position: 1
 
 Analyze and visualize asset sizes in your Unreal Engine project. Quickly identify large assets and optimize your project's memory footprint.
 
+::: info Actively Maintained
+This plugin is actively maintained by Deblx. We provide bug fixes, Unreal Engine compatibility updates, and improvements as needed. See the [Deblx Changelog](https://changelog.deblx.com) for the latest releases.
+:::
+
 ## Overview
 
 Asset Size Analyzer is an editor tool that provides comprehensive insights into your project's asset sizes. Whether you're optimizing for memory budgets, preparing for shipping, or conducting asset audits, this plugin gives you the data you need to make informed decisions.
